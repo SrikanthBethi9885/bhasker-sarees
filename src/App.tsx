@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import HomeContent from './HomeContent/HomeContent';
 import Footer from './Footer/Footer';
 import AboutContent from './AboutContent/AboutContent';
+import ContactContent from './ContactContent/ContactContent';
 
 const Container = styled.div`
   display: flex;
@@ -51,14 +52,13 @@ const Main = styled.main`
 `;
 //const AboutContent = () => <p>This is the About page content.</p>;
 const ServicesContent = () => <p>This is the Services page content.</p>;
-const ContactContent = () => <p>This is the Contact page content.</p>;
 const App = () => {
   return (
     <Container>
       <Router>
         <FormContainer>
           <Header>
-            <NavLink to="/" ><Logo style={{ width: '200px', height: '50px' }}>Bhasker Sarees</Logo></NavLink>
+            <NavLink to="/" ><Logo style={{ width: '200px', height: '50px' }}>సుంచు భాస్కర్</Logo></NavLink>
             <div>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
