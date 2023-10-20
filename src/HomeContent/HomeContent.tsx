@@ -16,14 +16,14 @@ const HomeContent = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentImageIndex((prevIndex: any) => (prevIndex + 1) % imageUrls.length);
-        }, 3000); // Change image every 3 seconds (adjust the interval as needed)
+        }, 2000); // Change image every 3 seconds (adjust the interval as needed)
 
         return () => clearInterval(intervalId);
     }, [currentImageIndex, imageUrls.length]);
 
     return (
         <div>
-            <img src={imageUrls[currentImageIndex]} alt={`${currentImageIndex + 1}`} style={{ width: '75%', height: '500px' }} />
+            <img src={imageUrls[currentImageIndex]} alt={`${currentImageIndex + 1}`} style={{ width: '100%', maxHeight: '500px' }} />
             <h2 style={{ color: '#008080' }}>విశేషాలు</h2>
             <p style={{ color: '#b107b0', fontWeight: 'bold' }}>పోచంపల్లి చేనేత కళాకారులు నిలువు పేకల మగ్గంపై నేసిన చేనేత కళాఖండాలకు ప్రపంచ వ్యాప్తంగా మంచి గుర్తింపు ఉంది. తెలంగాణ రాష్ట్ర రాజధానికి 35 కి.మీ. దూరంలో ఉన్న పోచంపల్లి చేనేత, భూదానోద్యమానికి ప్రసిద్ధి చెందింది. అక్కడి చేనేత కార్మికులు నేసిన చీరలు అందరినీ మురిపిస్తాయి. ఇక ఆడవారినైతే అమితంగా ఆకర్షిస్తాయి. చేనేతల్లో మొదటగా పేటెంట్ హక్కు పొందడం ఓ ప్రత్యేకత. సాధారణ స్త్రీల నుండి దేశ విదేశీ వనితల వరకూ అందరినీ ఆకట్టుకునే చేనేత ఉత్పత్తులు, చీరలతో ఖండాంతర ఖ్యాతిని పోచంపల్లి పొందింది. అనాడు అగ్గిపెట్టెలో పట్టే పట్టుచీరను నేసిన నేతన్నలు ప్రస్తుతం అనేక డిజైన్లలో చేనేత బట్టలను నేసి, అందరినీ ఆకర్షిస్తున్నారు</p>
             <h2 style={{ color: '#008080', fontWeight: 'bold' }}>చరిత్ర</h2>
