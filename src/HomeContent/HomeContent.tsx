@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import img from './img.jpg' // Import local image
 import img1 from './img1.jpg' // Import local image
 import img2 from './img2.jpg'
@@ -6,17 +6,16 @@ import img3 from './img3.jpg' // Import local image
 import img4 from './img4.jpg' // Import local image
 import img5 from './img5.jpg'
 import img6 from './img6.jpg'
-import { Grid, Typography } from '@mui/material';
 
 
 const HomeContent = () => {
-    const imageUrls = [img, img1, img3, img4, img5, img6];  // Array of locally imported images
+    const imageUrls = [img, img1, img2, img3, img4, img5, img6];  // Array of locally imported images
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+            setCurrentImageIndex((prevIndex: any) => (prevIndex + 1) % imageUrls.length);
         }, 3000); // Change image every 3 seconds (adjust the interval as needed)
 
         return () => clearInterval(intervalId);
